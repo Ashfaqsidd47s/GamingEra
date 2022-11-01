@@ -1,0 +1,20 @@
+$width: 725px;
+
+@mixin mobile {
+    @media(max-width: #{$width}){
+        @content
+    }
+}
+
+@mixin big-tab {
+    @media(max-width: 1200px ) and (min-width: 900px){
+        @content
+    }
+}
+
+@mixin small-tab {
+    @media(min-width: 725px) and (max-width: 900px){
+        @content
+    }  
+}
+

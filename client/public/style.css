@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-color: #0583F2;
+    --main-bg-color: #fbf4f8;
+    --second--bg-color: #F2DCE8;
+    --third-bg-color: #F2F2F2;
+    --main-text-color: black;
+    --second-text-color: gray;
+    --third-text-color: white;
+    --shadow-color: #fa2bb2;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Color Theme Swatches in Hex */
+.Deveb---Creative-Design-Agency-1-hex-second-bg-color { color: #F2DCE8; }
+.Deveb---Creative-Design-Agency-2-hex { color: #F2A2D6; }
+.Deveb---Creative-Design-Agency-3-hex { color: #F2BBE3; }
+.Deveb---Creative-Design-Agency-4-hex-main-color { color: #0583F2; }
+.Deveb---Creative-Design-Agency-5-hex { color: #F2E1D8; }
+.Deveb---Creative-Design-Agency-6-hex { color: #f7e9f0; }
+.Deveb---Creative-Design-Agency-7-hex-main-bgcolor { color: #fbf4f8; }
+
+
+
+/* Color Theme Swatches in Hex */
+.Res1-hex { color: #643DF2; }
+.Res2-hex { color: #7957F2; }
+.Res3-hex { color: #8A6DF2; }
+.Res4-hex { color: #B0B2BF; }
+.Res5-hex { color: #404040; }
+
+
+/* Color Theme Swatches in Hex */
+.PALETTE-mini1-hex { color: #D8D9D7; }
+.PALETTE-mini2-hex { color: #BFBFBD; }
+.PALETTE-mini3-hex { color: #F2F2F2; }
+.PALETTE-mini4-hex { color: #73706C; }
+.PALETTE-mini5-hex { color: #0D0D0D; }
+
+
+
+
+

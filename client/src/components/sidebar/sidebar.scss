@@ -1,0 +1,189 @@
+@import "../../global.scss";
+.sidebar{
+    flex: 4;
+    
+    align-self: flex-start;
+    position: sticky;
+    top: 70px;
+
+    @include small-tab{
+        flex: 1.5;
+    }
+
+    @include mobile{
+        position: fixed;
+        top: calc(93vh - 60px);
+        right: 10px;
+        left: 10px;
+        z-index: 100;
+    }
+
+    .sidebarWrapper{
+        border-radius: 10px;
+        padding: 10px;
+        padding-top: 20px;
+        background-color: var(--main-bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        @include mobile{
+            padding: 10px;
+            flex-direction: row;
+        }
+
+        .sidebarProfile{
+            width: 100%;
+            height: 50px;
+            background-color: var(--third-bg-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 3px 40px -20px var(--shadow-color);
+
+            @include mobile{
+                display: none;
+            }
+
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-left: 10px;
+            }
+            .profileName{
+                color: black;
+                margin-left: 10px;
+                font-size: 20px;
+
+                @include small-tab{
+                    display: none;
+                }
+            }
+        }
+
+        .sidebarMenue{
+            width: 100%;
+            background-color: var(--third-bg-color);
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 3px 40px -20px var(--shadow-color);
+
+            @include mobile{
+                flex-direction: row;
+                justify-content: center;
+            }
+    
+            .menueItem{
+                background-color: var(--third-bg-color);
+                padding: 5px 0px 5px 15px;
+                display: flex;
+                margin-bottom: 2px;
+                align-items: center;
+                cursor: pointer;
+                
+
+                &.notImp{
+                    @include mobile{
+                        display: none;
+                    }
+                }
+
+                @include mobile{
+                    flex-direction: column;
+                }
+    
+                .menueItemIcon{
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 15px;
+
+                    @include mobile{
+                        margin: 0;
+                    }
+    
+                    i{
+                        font-size: 22px;
+                        color: var(--second--bg-color);
+                    }
+                }
+    
+                .menueItemName {
+                    width: max-content;
+
+                    @include small-tab{
+                        display: none;
+                    }
+
+                    @include mobile{
+                        font-size: 10px;
+                    }
+                }
+            }
+            .menueItem:hover {
+                background-color: var(--main-bg-color);
+                color: var(--main-color);
+                border-left: 5px solid var(--main-color);
+                padding-left: 10px;
+
+                i{
+                    color: var(--main-color);
+                }
+
+                @include mobile{
+                    border-left: none;
+                    border-bottom: 5px solid var(--main-color);
+                    padding-left: 0;
+                    padding-bottom: 5px;
+                }
+            }
+    
+        }
+        .sidebarBtn{
+            width: 100%;
+            height: 45px;
+            margin-top: 10px;
+            border-radius: 20px;
+            color: white;
+            font-size: larger;
+            border: none;
+            background-color:  var(--main-color);
+            cursor: pointer;
+            box-shadow: 0px 3px 40px -20px rgba(0,0,0,0.8);
+
+            &.logoutBtn{
+                background-color: var(--second--bg-color);
+                color: black;
+            }
+
+            @include small-tab{
+                width: 50px;
+                font-size: 10px;
+            }
+
+            @include mobile{
+                display: none;
+            }
+        }
+        .sidebarBtn:hover{
+            background-color: #46A667;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 2.5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--second--bg-color);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--main-bg-color);
+}

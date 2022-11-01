@@ -1,0 +1,43 @@
+@import "../../global.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: var(--main-bg-color);
+
+    .homeContainer{
+        display: flex;
+        width: 75%;
+        position: relative;
+
+        @include big-tab{
+            width: 900px;
+        }
+
+        @include small-tab{
+            width: 100%;
+        }
+
+        @include mobile{
+            width: 100%;
+        }
+    }
+}
+
+
+/* Color Theme Swatches in Hex */
+.Deveb---Creative-Design-Agency-1-hex { color: #F2DCE8; }
+.Deveb---Creative-Design-Agency-2-hex { color: #F2A2D6; }
+.Deveb---Creative-Design-Agency-3-hex { color: #F2BBE3; }
+.Deveb---Creative-Design-Agency-4-hex { color: #0583F2; }
+.Deveb---Creative-Design-Agency-5-hex { color: #F2E1D8; }
+
+

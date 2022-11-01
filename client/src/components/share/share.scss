@@ -1,0 +1,79 @@
+@import "../../global.scss";
+.share {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--third-bg-color);
+    box-shadow: 0px 3px 40px -20px var(--shadow-color);
+
+    .shareWrapper {
+        padding: 20px 10px 10px 10px;
+
+
+        .shareTop {
+            display: flex;
+            align-items: center;
+
+            .shareProfileImg {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .shareInput {
+                border: none;
+                width: 80%;
+                background-color: var(--third-bg-color);
+            }
+            
+            .shareInput:focus {
+                outline: none;
+            }
+        }
+
+        .shareHr {
+            margin: 10px;
+        }
+
+        .postPhoto{
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .shareBottom {
+            display: flex;
+            align-items: center;
+
+            .shareOptions {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                .shareOption {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .shareOptionImg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .shareButton {
+                    width: 60px;
+                    height: 28px;
+                    border: none;
+                    background-color: var(--main-color);
+                    border-radius: 4px;
+                    font-size: 14px;
+                    color: white;
+                    cursor: pointer;
+                }
+                .shareButton:hover{
+                    background-color: #46A667;
+                }
+            }
+        }
+    }
+}

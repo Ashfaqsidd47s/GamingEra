@@ -1,0 +1,114 @@
+@import "../../global.scss";
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    width: 100%;
+    background-color: var(--third-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top:0;
+    z-index: 9999;
+
+
+    .navbarWrapper {
+        width: 75%;
+        height: 50px;
+        padding: 10px 20px;
+        background-color: var(--third-bg-color);       
+        display: flex;
+        align-items: center;
+
+        @include big-tab{
+            width: 900px;
+        }
+    
+        @include small-tab{
+            width: 100%;
+        }
+
+        @include mobile{
+            width: 100%;
+            padding: 10px 10px;
+        }
+
+        .logo {
+            flex:3;
+
+            h1{
+                font-size: 28px;
+                color: var(--main-color);
+            }
+        }
+
+        .searchBlock {
+            flex: 5;
+            background-color: var(--main-bg-color);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+
+            .searchIcon {
+               
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+
+                i {
+                    font-size: 18px;
+                    margin: 0px 10px;
+                    color: #333;
+                }
+            }
+
+            .searchInput {
+                width: 80%;
+                background-color: var(--main-bg-color);
+                border: none;
+                font-size: 16px;
+            }
+            .searchInput:focus {
+                outline: none;
+            }
+        }
+
+        .rightBlock {
+            flex: 3.5;
+          
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .navbarIcons {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                
+                .navbarIcon {
+                    width: 32px;
+                    height: 32px;
+
+                    img{
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            .profileIcon{
+                width: 40px;
+                height: 40px;
+
+                img{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
