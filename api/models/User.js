@@ -20,11 +20,11 @@ const userSchema = new mongoose.Schema({
     },
     profilePic: {
         type: String,
-        default: "",
+        default: "userProfile.jpg",
     },
     coverPic: {
         type: String,
-        default: "",
+        default: "userCover.png",
     },
     followers: {
         type: Array,

@@ -1,12 +1,13 @@
 .formContainer{
-    background-color: #ACF2C5;
+    background-color: var(--main-bg-color);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .formWrapper{
-        background-color: white;
+        background-color: var(--third-bg-color);
+        box-shadow: 0px 3px 40px -20px var(--shadow-color);
         padding: 20px 60px;
         border-radius: 10px;
         display: flex;
@@ -15,13 +16,13 @@
         align-items: center;
 
         .logo{
-            color: #03A64A;
+            color: var(--main-color);
             font-weight: bold;
             font-size: 24px;
         }
 
         .title{
-            color: #46A667;
+            color: var(--main-color);
             font-size: 14px;
         }
         form{
@@ -32,7 +33,7 @@
             input{
                 padding: 15px;
                 border: none;
-                border-bottom: 1px solid #46A667;
+                border-bottom: 1px solid var(--main-color);
 
                 &::placeholder{
                     color: rgb(175,175,175);
@@ -40,7 +41,7 @@
             }
 
             button{
-                background-color: #46A667;
+                background-color: var(--main-color);
                 color:white;
                 padding: 10px;
                 font-weight: bold;
@@ -48,14 +49,14 @@
                 cursor: pointer;
             }
             button:hover{
-                background-color: #03A64A;
+                background-color: var(--main-color);
             }
 
             label{
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: #46A667;
+                color: var(--main-color);
                 font-size: 12px;
                 cursor: pointer;
 
@@ -67,9 +68,17 @@
         }
 
         p{
-            color: #46A667;
+            color: var(--main-color);
             font-size: 12px;
             margin-top: 10px;
+
+            span{
+                cursor: pointer;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
         }
         .err{
             color: red;

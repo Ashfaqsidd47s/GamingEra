@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./login.scss";
 
@@ -29,7 +30,7 @@ function Login(){
     return (
         <div className="formContainer">
             <div className="formWrapper">
-                <span className="logo">Near Chat</span>
+                <span className="logo">Gaming Era</span>
                 <span className="title">Login</span>
                 <form onSubmit={handelSubmit}>
                     <input 
@@ -44,7 +45,12 @@ function Login(){
                     />
                     <button type="submit">Sign in</button>
                 </form>
-                <p>you don't have an account? Register</p>
+                <p>
+                    you don't have an account? 
+                    <Link to="/register" className="link">
+                        <span>Register</span>
+                    </Link>
+                </p>
                 {err &&<p className="err">someting went wrong!!..</p>}
             </div>
         </div>

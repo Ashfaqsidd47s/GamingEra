@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./register.scss";
 import Add from "../../images/logo/add.png";
 import axios from "axios";
+import { Link, Navigate } from "react-router-dom";
 
 function Register(){
     const [username,setUsername] = useState("");
@@ -15,6 +16,7 @@ function Register(){
         try {
             const res = await axios.post("http://localhost:8080/api/auth/register",{username:username, password:password, email:email});
             console.log(res);
+            res.data && window.location.replace("/login");
         } catch (err) {
             setErr(true);
             console.log(err);
@@ -24,7 +26,7 @@ function Register(){
     return (
         <div className="formContainer">
             <div className="formWrapper">
-                <span className="logo">Near Chat</span>
+                <span className="logo">Gaming Era</span>
                 <span className="title">Register</span>
                 <form onSubmit={handelSubmit}>
                     <input 
@@ -52,7 +54,12 @@ function Register(){
                     </label>
                     <button type="submit">Sign up</button>
                 </form>
-                <p>you do have an account? Login</p>
+                <p>
+                    you do have an account? 
+                    <Link to="/login" className="link">
+                        <span>Login</span>
+                    </Link>
+                </p>
                 {err &&<p className="err">someting went wrong!!..</p>}
             </div>
         </div>
