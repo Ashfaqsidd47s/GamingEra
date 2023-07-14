@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./sidebar.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Context } from "../../context/Context";
 
 function Sidebar(){
@@ -19,26 +19,26 @@ function Sidebar(){
                     <span className="profileName">{user.username}</span>
                 </div>
                 <div className="sidebarMenue">
-                    <Link to="/" className="link">
-                    <div className="menueItem">
-                        <div className="menueItemIcon">
-                            <i class="fa-solid fa-house"></i>
+                    <NavLink to="/"  className="link">
+                        <div className="menueItem">
+                            <div className="menueItemIcon">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                            <div className="menueItemName">
+                                <h3>Home</h3>
+                            </div>
                         </div>
-                        <div className="menueItemName">
-                            <h3>Home</h3>
+                    </NavLink>
+                    <NavLink to="/messenger" className="link">
+                        <div className="menueItem">
+                            <div className="menueItemIcon">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                            <div className="menueItemName">
+                                <h3>messenger</h3>
+                            </div>
                         </div>
-                    </div>
-                    </Link>
-                    <Link to="/messenger" className="link">
-                    <div className="menueItem">
-                        <div className="menueItemIcon">
-                            <i class="fa-solid fa-comment"></i>
-                        </div>
-                        <div className="menueItemName">
-                            <h3>messenger</h3>
-                        </div>
-                    </div>
-                    </Link>
+                    </NavLink>
                     <div className="menueItem">
                         <div className="menueItemIcon">
                             <i class="fa-solid fa-bell"></i>
@@ -63,17 +63,17 @@ function Sidebar(){
                             <h3>Turnament</h3>
                         </div>
                     </div>
-                    <Link to="/profile" className="link">
-                    <div className="menueItem">
-                        <div className="menueItemIcon">
-                            <i class="fa-solid fa-user"></i>
+                    <NavLink to="/profile" className="link">
+                        <div className="menueItem">
+                            <div className="menueItemIcon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div className="menueItemName">
+                                <h3>Profile</h3>
+                            </div>
                         </div>
-                        <div className="menueItemName">
-                            <h3>Profile</h3>
-                        </div>
-                    </div>
-                    </Link>
-                    <Link to="/edit" className="link">
+                    </NavLink>
+                    <NavLink to="/edit" className="link">
                     <div className="menueItem">
                         <div className="menueItemIcon">
                             <i class="fa-solid fa-gear"></i>
@@ -82,7 +82,7 @@ function Sidebar(){
                             <h3>Setting</h3>
                         </div>
                     </div>
-                    </Link>
+                    </NavLink>
                 </div>
                 <button 
                     className="sidebarBtn logoutBtn" 

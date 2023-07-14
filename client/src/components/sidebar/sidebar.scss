@@ -143,6 +143,25 @@
                     padding-bottom: 5px;
                 }
             }
+            .active{
+                .menueItem{
+                    background-color: var(--main-bg-color);
+                    color: var(--main-color);
+                    border-left: 5px solid var(--main-color);
+                    padding-left: 10px;
+
+                    i{
+                        color: var(--main-color);
+                    }
+
+                    @include mobile{
+                        border-left: none;
+                        border-bottom: 5px solid var(--main-color);
+                        padding-left: 0;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
     
         }
         .sidebarBtn{
@@ -172,10 +191,13 @@
             }
         }
         .sidebarBtn:hover{
-            background-color: #46A667;
+            background-color: var(--main-color);
         }
     }
 }
+
+
+
 
 ::-webkit-scrollbar {
     width: 5px;
